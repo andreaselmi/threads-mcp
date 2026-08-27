@@ -1,0 +1,56 @@
+{
+  "name": "@andreaselmi/threads-mcp",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "MCP server for the Threads API: publish posts and read your own posts, insights and quota.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "threads",
+    "meta",
+    "graph-api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreaselmi/threads-mcp.git"
+  },
+  "homepage": "https://github.com/andreaselmi/threads-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/andreaselmi/threads-mcp/issues"
+  },
+  "author": "andreaselmi (https://github.com/andreaselmi)",
+  "bin": {
+    "threads-mcp": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "tsx": "^4.23.12",
+    "typescript": "^5.9.0",
+    "vitest": "^4.1.11"
+  }
+}
