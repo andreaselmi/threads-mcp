@@ -21,7 +21,7 @@
   },
   "author": "andreaselmi (https://github.com/andreaselmi)",
   "bin": {
-    "threads-mcp": "./dist/index.js"
+    "threads-mcp": "dist/index.js"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
